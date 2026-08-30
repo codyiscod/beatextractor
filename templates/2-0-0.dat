@@ -1,0 +1,59 @@
+{
+  "_version": "2.0.0",
+  "_songName": "{song_name}",
+  "_songSubName": "{song_subname}",
+  "_songAuthorName": "{song_author}",
+  "_levelAuthorName": "{level_author}",
+  "_beatsPerMinute": {song_bpm},
+  "_songTimeOffset": {song_offset},
+  "_shuffle": 0,
+  "_shufflePeriod": 0,
+  "_previewStartTime": 0,
+  "_previewDuration": 0,
+  "_songFilename": "{music_filename}",
+  "_coverImageFilename": "{cover_filename}",
+  "_environmentName": "{environment_name}",
+  "_allDirectionsEnvironmentName": "{ad_environment_name}",
+  "_difficultyBeatmapSets": [
+    {
+      "_beatmapCharacteristicName": "Standard",
+      "_difficultyBeatmaps": [
+        {
+          "_difficulty": "Easy",
+          "_difficultyRank": 1,
+          "_beatmapFilename": "Easy.dat",
+          "_noteJumpMovementSpeed": 10,
+          "_noteJumpStartBeatOffset": 0
+        },
+        {
+          "_difficulty": "Normal",
+          "_difficultyRank": 3,
+          "_beatmapFilename": "Normal.dat",
+          "_noteJumpMovementSpeed": 10,
+          "_noteJumpStartBeatOffset": 0
+        },
+        {
+          "_difficulty": "Hard",
+          "_difficultyRank": 5,
+          "_beatmapFilename": "Hard.dat",
+          "_noteJumpMovementSpeed": 10,
+          "_noteJumpStartBeatOffset": 0
+        },
+        {
+          "_difficulty": "Expert",
+          "_difficultyRank": 7,
+          "_beatmapFilename": "Expert.dat",
+          "_noteJumpMovementSpeed": 16,
+          "_noteJumpStartBeatOffset": 1
+        },
+        {
+          "_difficulty": "ExpertPlus",
+          "_difficultyRank": 9,
+          "_beatmapFilename": "ExpertPlus.dat",
+          "_noteJumpMovementSpeed": 18,
+          "_noteJumpStartBeatOffset": 0.5
+        }
+      ]
+    }
+  ]
+}

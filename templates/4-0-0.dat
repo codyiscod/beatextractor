@@ -1,0 +1,22 @@
+{
+  "version": "4.0.0",
+  "song": {
+    "title": "",
+    "subTitle": "",
+    "author": ""
+  },
+  "audio": {
+    "songFilename": "song.ogg",
+    "songDuration": 0,
+    "audioDataFilename": "BPMInfo.dat",
+    "bpm": 0,
+    "lufs": 0,
+    "previewStartTime": 0,
+    "previewDuration": 0
+  },
+  "songPreviewFilename": "songPreview.ogg",
+  "coverImageFilename": "cover.png",
+  "environmentNames": [],
+  "colorSchemes": [],
+  "difficultyBeatmaps": []
+}
