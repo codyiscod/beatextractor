@@ -16,8 +16,9 @@ from create_playlist import create_playlist
 
 def main():
     # get packs and pack names
-    game_folder = Path("C:\\Users\\Administrator\\Downloads\\Beat Saber v1790+1.40.10_8486 -VRP\\com.beatgames.beatsaber")
-    obb_file = game_folder / "main.1790.com.beatgames.beatsaber.obb"
+    game_folder = Path("C:\\Users\\Administrator\\Desktop\\More\\beatextractor\\obb")
+    obb_file = game_folder / "main.3491.com.beatgames.beatsaber.obb"
+    obb_folder_name = "main.3491.com.beatgames.beatsaber"
     packs = get_packs(obb_file)
 
     pack_names = [cut_string(pack.replace("assets/aa/Android/", ""), "_pack_assets_all_") for pack in packs]
@@ -29,7 +30,7 @@ def main():
 
     if pack_id == "*":
         for i, pack_name in enumerate(pack_names):
-            extract(pack_name, obb_file, packs[i], game_folder)
+            extract(pack_name, obb_file, packs[i], game_folder, obb_folder_name)
         print("\nDone! Press any key to exit...")
         msvcrt.getch()
         sys.exit()
@@ -42,14 +43,14 @@ def main():
     pack_index = pack_names.index(pack_id)
     pack_file = packs[pack_index]
 
-    extract(pack_id, obb_file, pack_file, game_folder)
+    extract(pack_id, obb_file, pack_file, game_folder, obb_folder_name)
     print("\nDone! Press any key to exit...")
     msvcrt.getch()
     sys.exit()
 
 
 
-def extract(pack_id, obb_file, pack_file, game_folder):
+def extract(pack_id, obb_file, pack_file, game_folder, obb_folder_name):
     script_dir = Path(__file__).parent
     packs_folder = script_dir/"extracted_packs"
     packs_folder.mkdir(exist_ok=True)
@@ -138,7 +139,8 @@ def extract(pack_id, obb_file, pack_file, game_folder):
         song_folder = pack_folder/song_id
         tmp_folder = song_folder/"tmp"
 
-        shutil.copy(game_folder/song_id, tmp_folder/"song.asset")
+        # shutil.copy(game_folder/song_id, tmp_folder/"song.asset")
+        shutil.copy(game_folder/obb_folder_name/"assets"/"BeatmapLevelsData"/song_id, tmp_folder/"song.asset")
 
 
 

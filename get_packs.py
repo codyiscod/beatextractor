@@ -13,7 +13,6 @@ def get_packs(obb_path):
         "default_assets_",
         "debug_pack_",
         "coretrackdefinitions_",
-        "ostvol",
         "extras_"
     ]
 
